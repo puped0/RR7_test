@@ -19,14 +19,14 @@ default: &default
 
 development:
   <<: *default
-  database: omg_development
+  database: rails7_test_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: omg_test
+  database: rails7_test_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -50,6 +50,6 @@ test:
 #
 production:
   <<: *default
-  database: omg_production
-  username: omg
-  password: <%= ENV["OMG_DATABASE_PASSWORD"] %>
+  database: rails7_test_production
+  username: rails7_test
+  password: <%= ENV["RAILS7_TEST_DATABASE_PASSWORD"] %>
